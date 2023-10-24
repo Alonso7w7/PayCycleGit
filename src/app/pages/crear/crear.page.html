@@ -1,48 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button click="back()">
-        <ion-icon name="arrow-back"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title class="ion-text-center">
-      Crear cuenta
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
+<ion-content>
+  <div class="container">
+    <div class="login-body">
+      <div class="top-login">
+        <div class="title">Registrarse</div>
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+        <div class="line-11"></div>
+        <div class="line-22"></div>
+        <div class="line-33"></div>
+        <div class="line-111"></div>
+        <div class="line-222"></div>
+        <div class="line-333"></div>
+      </div>
+      <div class="character-circel">
+        <div class="character-body">
+          <div class="head"></div>
+          <div class="hair1"></div>
+          <div class="hair2"></div>
+        </div>
+      </div>
+      <div class="character-bacground"></div>
+      <div class="character-bacground2"></div>
+      <div class="character-bacground3"></div>
+      <div class="character-circle1"></div>
+      <div class="character-circle2"></div>
 
-<ion-content [fullscreen]="true" >
-  <form [formGroup]="regForm" novalidate>
-    <ion-card class="register-card">
-      <ion-card-content>
-        <ion-item>
-          <ion-label position="floating">Correo</ion-label>
-          <ion-input type="email" formControlName="correo"></ion-input>
-        </ion-item>
-        <div style="padding-top: -26px;padding-bottom: 16px;"
-        *ngIf="this.regForm.controls?.['correo'].touched && this.regForm.controls?.['correo'].invalid">
-        <ion-text *ngIf="errorRegistro.correo.errors?.required" color="danger">Correo invalido</ion-text>
+      <div class="login-box">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="morab31"></div>
+        <div class="morab32"></div>
+        <div class="morab33"></div>
+        <div class="morab34"></div>
+        <ion-input type="text" [(ngModel)]="datos.nombreUsuario" required>Nombre de Usuario</ion-input>
+        <ion-input type="password" [(ngModel)]="datos.contrasena" required>Contraseña</ion-input>
+        <ion-input type="email" [(ngModel)]="datos.correo" required>Correo Electrónico</ion-input>
+        <ion-input type="text" [(ngModel)]="datos.numero" placeholder="+56 9" required>Número Telefónico</ion-input>
+        <ion-button class="button" (click)="registrar()" >Registrarse</ion-button>
+        <div class="last-info">
+          
+        </div>
       </div>
-      
-        <ion-item>
-    
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input type="password" formControlName="pass"></ion-input>
-        </ion-item>
-        <div style="padding-top: -26px;padding-bottom: 16px;"
-        *ngIf="this.regForm.controls?.['pass'].touched && this.regForm.controls?.['pass'].invalid">
-        <ion-text *ngIf="errorRegistro.correo.errors?.required" color="danger">Contraseña invalida</ion-text>
-      </div>
-      
-     
-    
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-button expand="block"  shape="round" fill="outline" color="dark" (click)="registrarse()">Registrarse</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
-    </ion-card>
-  </form>
+    </div>
+  </div>
 </ion-content>
+
+<!-- Fondo inferior -->
+<div class="down-login"></div>

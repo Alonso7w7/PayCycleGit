@@ -29,15 +29,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/crear/crear.module').then( m => m.CrearPageModule)
   },
   {
-    path: 'reiniciar-pass',
-    loadChildren: () => import('./pages/reiniciar-pass/reiniciar-pass.module').then( m => m.ReiniciarPassPageModule)
-  },
-  
-  {
     path: '**',
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
-
+  
  
 ];
 
